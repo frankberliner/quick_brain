@@ -1,0 +1,16 @@
+# Visual companion server runtime artifacts
+scripts/.server-info
+scripts/.server-stopped
+scripts/.events
+scripts/*.pid
+
+# Per-project brainstorm session directories
+.quickbrain/
+.superpowers/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

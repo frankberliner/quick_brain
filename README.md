@@ -1,6 +1,16 @@
 # quick_brain
 
-A standalone, lightweight fork of the original `brainstorming` skill from the [Superpowers](https://github.com/obra/superpowers) skill collection.
+[![skills.sh](https://skills.sh/b/frankberliner/quick_brain)](https://skills.sh/frankberliner/quick_brain)
+
+A standalone, lightweight fork of the original `brainstorming` skill from the [Superpowers](https://github.com/obra/superpowers) skill collection by [Jesse Vincent (@obra)](https://github.com/obra).
+
+## Install
+
+```bash
+npx skills add frankberliner/quick_brain
+```
+
+That's it — the CLI auto-detects your agent (Claude Code, Codex, Cursor, Amp, OpenCode, and 50+ others) and installs `quickbrain` along with all bundled resources.
 
 ## What is quick_brain?
 
@@ -55,6 +65,7 @@ For small or focused changes, this workflow consumes a lot of tokens and adds fr
 ```
 quick_brain/
 ├── README.md                                 ← you are here
+├── LICENSE                                   ← MIT
 ├── SKILL.md                                  ← main brainstorming skill (quickbrain)
 ├── visual-companion.md                       ← detailed guide for the browser companion
 ├── writing-plans.md                          ← writes the implementation plan
@@ -70,14 +81,22 @@ quick_brain/
 
 All `.md` files reference each other by **relative path** within this directory. There are no external skill dependencies. If you copy or move the `quick_brain/` folder, everything keeps working.
 
-## Installation
+## Manual installation (alternative)
 
-1. Copy or clone the `quick_brain/` folder into the location your AI agent looks for skills (for example, `~/.agents/skills/quick_brain/` for Amp).
-2. Make the visual-companion server scripts executable if they aren't already:
+If you prefer not to use the `skills` CLI:
+
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/frankberliner/quick_brain.git
+   ```
+2. Copy the contents into your agent's skills directory. For example:
+   - **Amp:** `~/.config/agents/skills/quick_brain/`
+   - **Claude Code:** `~/.claude/skills/quick_brain/`
+   - **Codex / Cursor / OpenCode / …:** see [the supported-agents table in the skills CLI README](https://github.com/vercel-labs/skills#supported-agents)
+3. Make the visual-companion server scripts executable if they aren't already:
    ```bash
    chmod +x quick_brain/scripts/start-server.sh quick_brain/scripts/stop-server.sh
    ```
-3. The agent will pick up `SKILL.md` (`quickbrain`) automatically. The other `.md` files are invoked by `quickbrain` itself; you don't need to register them separately.
 
 ## Usage
 
@@ -94,8 +113,15 @@ If you pick **"write the plan"**, the agent invokes `quickbrain-writing-plans`, 
 
 ## Credits / Attribution
 
-This fork is based on the `brainstorming`, `writing-plans`, `executing-plans`, and `subagent-driven-development` skills from the original **Superpowers** skill collection by [@obra](https://github.com/obra) and contributors.
+This fork is based on the `brainstorming`, `writing-plans`, `executing-plans`, and `subagent-driven-development` skills from the original **[Superpowers](https://github.com/obra/superpowers)** skill collection by [Jesse Vincent (@obra)](https://github.com/obra) and the wider Superpowers contributor community.
 
 All original design, prose, the Visual Companion server, and the underlying workflow concepts are their work. `quick_brain` only re-shapes that workflow for a lighter, lower-token use case — the credit for the ideas belongs to the original authors.
 
-If you find this fork useful, please also check out and support the original project.
+If you find this fork useful, please also check out and support the original project:
+- **Repository:** https://github.com/obra/superpowers
+- **Author's blog post:** https://blog.fsck.com/2025/10/09/superpowers/
+- **Sponsor Jesse:** https://github.com/sponsors/obra
+
+## License
+
+MIT — same as the upstream Superpowers project. See [`LICENSE`](./LICENSE).
