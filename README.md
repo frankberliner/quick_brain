@@ -64,22 +64,24 @@ For small or focused changes, this workflow consumes a lot of tokens and adds fr
 
 ```
 quick_brain/
-├── README.md                                 ← you are here
-├── LICENSE                                   ← MIT
-├── SKILL.md                                  ← main brainstorming skill (quickbrain)
-├── visual-companion.md                       ← detailed guide for the browser companion
-├── writing-plans.md                          ← writes the implementation plan
-├── subagent-driven-development.md            ← plan execution via fresh subagents per task
-├── executing-plans.md                        ← inline plan execution (no subagents)
-└── scripts/                                  ← visual companion browser server
-    ├── frame-template.html
-    ├── helper.js
-    ├── server.cjs
-    ├── start-server.sh
-    └── stop-server.sh
+├── README.md                                     ← you are here
+├── LICENSE                                       ← MIT
+└── skills/
+    └── quickbrain/                               ← the skill (folder name = skill name)
+        ├── SKILL.md                              ← main brainstorming skill (quickbrain)
+        ├── visual-companion.md                   ← detailed guide for the browser companion
+        ├── writing-plans.md                      ← writes the implementation plan
+        ├── subagent-driven-development.md        ← plan execution via fresh subagents per task
+        ├── executing-plans.md                    ← inline plan execution (no subagents)
+        └── scripts/                              ← visual companion browser server
+            ├── frame-template.html
+            ├── helper.js
+            ├── server.cjs
+            ├── start-server.sh
+            └── stop-server.sh
 ```
 
-All `.md` files reference each other by **relative path** within this directory. There are no external skill dependencies. If you copy or move the `quick_brain/` folder, everything keeps working.
+All `.md` files reference each other by **relative path** within `skills/quickbrain/`. There are no external skill dependencies. If you copy or move the `quickbrain/` folder, everything keeps working.
 
 ## Manual installation (alternative)
 
@@ -89,13 +91,14 @@ If you prefer not to use the `skills` CLI:
    ```bash
    git clone https://github.com/frankberliner/quick_brain.git
    ```
-2. Copy the contents into your agent's skills directory. For example:
-   - **Amp:** `~/.config/agents/skills/quick_brain/`
-   - **Claude Code:** `~/.claude/skills/quick_brain/`
+2. Copy the `skills/quickbrain/` folder into your agent's skills directory. For example:
+   - **Amp:** `~/.config/agents/skills/quickbrain/`
+   - **Claude Code:** `~/.claude/skills/quickbrain/`
    - **Codex / Cursor / OpenCode / …:** see [the supported-agents table in the skills CLI README](https://github.com/vercel-labs/skills#supported-agents)
 3. Make the visual-companion server scripts executable if they aren't already:
    ```bash
-   chmod +x quick_brain/scripts/start-server.sh quick_brain/scripts/stop-server.sh
+   chmod +x ~/.config/agents/skills/quickbrain/scripts/start-server.sh \
+            ~/.config/agents/skills/quickbrain/scripts/stop-server.sh
    ```
 
 ## Usage

@@ -1,8 +1,8 @@
 # Visual companion server runtime artifacts
-scripts/.server-info
-scripts/.server-stopped
-scripts/.events
-scripts/*.pid
+skills/quickbrain/scripts/.server-info
+skills/quickbrain/scripts/.server-stopped
+skills/quickbrain/scripts/.events
+skills/quickbrain/scripts/*.pid
 
 # Per-project brainstorm session directories
 .quickbrain/
