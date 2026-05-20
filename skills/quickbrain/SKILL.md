@@ -5,8 +5,6 @@ description: "Lightweight brainstorming fork — matures the idea through in-dep
 
 # quickbrain — Lightweight Brainstorming Into Designs
 
-> Part of the **quick_brain** fork. See `README.md` for context, motivation, and differences from the original `brainstorming` skill.
-
 Help turn ideas into fully formed designs through natural collaborative dialogue. Ask many focused questions first, then transition directly into a detailed implementation plan — no intermediate spec file, no subagent review loops.
 
 ## Checklist
