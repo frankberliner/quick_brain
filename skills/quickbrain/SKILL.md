@@ -1,6 +1,6 @@
 ---
 name: quickbrain
-description: "Lightweight brainstorming fork — matures the idea through in-depth questioning, presents visual mockups when needed, then transitions into a detailed implementation plan. Does not use spec documents or subagent review loops, reducing token consumption."
+description: Lightweight brainstorming fork that matures the idea through in-depth questioning, presents visual mockups when needed, then transitions into a detailed implementation plan. Does not use spec documents or subagent review loops, reducing token consumption. Use when brainstorming, designing, or planning a feature.
 ---
 
 # quickbrain — Lightweight Brainstorming Into Designs

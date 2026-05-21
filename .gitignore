@@ -8,6 +8,9 @@ skills/quickbrain/scripts/*.pid
 .quickbrain/
 .superpowers/
 
+# Local CLI cache (created when running `npx skills add ... --list` in this dir)
+.agents/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db
